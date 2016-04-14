@@ -58,9 +58,15 @@ var acfix_ver = 0.1;
 		});
 	};
 	if(b != 'zhuzhan' && b != 'letv'){
-		c("http://static.skydust.net/private/acfun/AcPlayer201412121_D.swf", "oldcs=1&host=http://www.talkshowcn.com&vid=" + $("a.active.primary").data("vid") + "|" + b + "|" + $("a.active.primary").data("sid"));
+		if( b == 'iqiyi'){
+			//c("http://static.skydust.net/private/acfun/AcPlayer201412121_D.swf", "oldcs=1&host=http://www.talkshowcn.com&vid=" + $("a.active.primary").data("vid") + "|" + b + "|" + $("a.active.primary").data("sid"));
+			c('http://static.skydust.net/private/acfun/AcPlayer201412121_D.swf', 'oldcs=1&vid=' + $('a.active').attr('data-vid') + '&host=http://www.talkshowcn.com');
+			$.info("视频源类型：辣鸡");
+		}else{
+			c("http://static.skydust.net/private/acfun/AcPlayer201412121_D.swf", "oldcs=1&host=http://www.talkshowcn.com&vid=" + $("a.active.primary").data("vid") + "|" + b + "|" + $("a.active.primary").data("sid"));
+			$.info("视频源类型：" + sourceList[b]);
+		}
 		$("#video-download").append('<a class="btn primary" onclick="$(_getPlayer()).prop(\'outerHTML\',$(_getPlayer()).prop(\'outerHTML\').replace(/acfun.tv/,\'talkshowcn.com\'))" style="float:none;color:#fff;margin-left:8px;" target="_blank"><i class="icon icon-refresh"></i>刷新</a>');
-		$.info("视频源类型：" + sourceList[b]);
 	}else{
 	    $.info("视频源类型：" + sourceList[b] + ";不会进行任何处理");
 	}
