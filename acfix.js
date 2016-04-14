@@ -59,8 +59,8 @@ var acfix_ver = 0.1;
 	};
 	if(b != 'zhuzhan' && b != 'letv'){
 		if( b == 'iqiyi'){
-			//c("http://static.skydust.net/private/acfun/AcPlayer201412121_D.swf", "oldcs=1&host=http://www.talkshowcn.com&vid=" + $("a.active.primary").data("vid") + "|" + b + "|" + $("a.active.primary").data("sid"));
-			c('http://static.skydust.net/private/acfun/AcPlayer201412121_D.swf', 'oldcs=1&vid=' + $('a.active').attr('data-vid') + '&host=http://www.talkshowcn.com');
+			c("http://static.skydust.net/private/acfun/AcPlayer201412121_D.swf", "oldcs=1&host=http://www.talkshowcn.com&vid=" + $("a.active.primary").data("vid") + "|" + b + "|" + $("a.active.primary").data("sid"));
+			//c('http://static.skydust.net/private/acfun/AcPlayer201412121_D.swf', 'oldcs=1&vid=' + $('a.active').attr('data-vid') + '&host=http://www.talkshowcn.com');
 			$.info("视频源类型：辣鸡");
 		}else{
 			c("http://static.skydust.net/private/acfun/AcPlayer201412121_D.swf", "oldcs=1&host=http://www.talkshowcn.com&vid=" + $("a.active.primary").data("vid") + "|" + b + "|" + $("a.active.primary").data("sid"));
