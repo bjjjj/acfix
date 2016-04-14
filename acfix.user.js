@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        AcFix
-// @namespace   www
+// @namespace   https://github.com/bjjjj/acfix
 // @description 基於AcFun Fix, 0.0.0.1版修改,個人學習用
 // @description 原版:http://www.talkshowcn.com/js/acfunfix.html
 // @include     *://www.acfun.tv/v/*
