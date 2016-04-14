@@ -8,6 +8,8 @@
 // @include     http://hengyang.acfun.tv/v/*
 // @include     http://wenzhou.acfun.tv/v/*
 // @include     *://acfun.tudou.com/v/*
+// @DownloadURL	https://github.com/bjjjj/acfix/blob/master/acfix.user.js
+// @updateURL	https://github.com/bjjjj/acfix/blob/master/acfix.user.js
 // @version     0.0.0.0.1
 // @author      bj
 // @grant       none
