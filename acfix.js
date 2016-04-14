@@ -1,5 +1,5 @@
-//ver 0.1
-var ver = 0.1;
+//ver 0.1 2016-4-14
+var acfix_ver = 0.1;
 (function() {
  	if (!document.domain) {
  		alert("如果你看到这个提示，那么可能你的浏览器太辣鸡，换个浏览器吧（Firefox、Chrome、IE11等）");
@@ -9,7 +9,7 @@ var ver = 0.1;
  		alert("进AcFun再说...");
  		return
  	}
- 	$.info("AcFix: 欢迎使用 AcFix js-ver：" + ver);
+ 	$.info("AcFix: 欢迎使用 AcFix Js-ver：" + acfix_ver);
  	var b = $("a.active.primary").data("from");
  	window._getPlayer = function() {
  		return document.getElementById("ACFlashPlayer-re") ? document.getElementById("ACFlashPlayer-re") : (document.getElementById("not-ACFlashPlayer-re") ? document.getElementById("not-ACFlashPlayer-re") : document.getElementById("area-player"));
