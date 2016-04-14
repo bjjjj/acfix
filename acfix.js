@@ -1,17 +1,13 @@
 (function() {
  	if (!document.domain) {
- 		alert("如果你确定你是在书签栏使用的，那么可能你的浏览器太辣鸡（比如360），换个现代的浏览器吧（火狐、谷歌、IE11都行的）");
- 		return
- 	}
- 	if (document.domain.toLowerCase().indexOf("talkshowcn.com") > 0) {
- 		alert("你应该是加到收藏夹或者拖到书签栏，而不是点我");
+ 		alert("如果你看到这个提示，那么可能你的浏览器太辣鸡，换个浏览器吧（Firefox、Chrome、IE11等）");
  		return
  	}
  	if (document.domain.toLowerCase().indexOf("acfun.tv") < 0 && document.domain.toLowerCase().indexOf("acfun.tudou.com") < 0) {
  		alert("进AcFun再说...");
  		return
  	}
- 	$.info("AcFun Fix: 欢迎使用 AcFun Fix 2015.02.19 E-mail:cctvyay@163.com");
+ 	$.info("AcFix: 欢迎使用 AcFix js-ver：0.1");
  	var b = $("a.active.primary").data("from");
  	window._getPlayer = function() {
  		return document.getElementById("ACFlashPlayer-re") ? document.getElementById("ACFlashPlayer-re") : (document.getElementById("not-ACFlashPlayer-re") ? document.getElementById("not-ACFlashPlayer-re") : document.getElementById("area-player"));
@@ -25,7 +21,7 @@
  		player.outerHTML = '<object style="visibility:visible;width:100%;height:100%" id="not-ACFlashPlayer-re" data="' + d + '" src="' + d + '" allowscriptaccess="always" allowfullscreen="true" allowfullscreeninteractive="true" type="application/x-shockwave-flash"><param value="true" name="allowFullscreenInteractive"><param value="true" name="allowfullscreen"><param value="always" name="allowscriptaccess"><param value="' + e + '" name="flashvars"><param name=movie value="' + d + '"></object>'
  	};
  	if (!document.getElementById("video-download")  && b != "pps") {
- 		$("#txt-title-view").append('<span id="video-download"><a class="btn primary" href="http://www.talkshowcn.com/page/acfun_danmu.html?vid='+$("a.active.primary").data("vid")+'&p='+(location.href.match(/_(\d+)/)?location.href.match(/_(\d+)/)[1]:"1")+'" title="视频下载" style="float:none;color:#fff;margin-left:8px;" target="_blank"><i class="icon icon-download"></i>详细信息及下载</a></span>')
+ 		$("#txt-title-view").append('<span id="video-download"><a class="btn primary" href="http://www.talkshowcn.com/page/acfun_danmu.html?vid='+$("a.active.primary").data("vid")+'&p='+(location.href.match(/_(\d+)/)?location.href.match(/_(\d+)/)[1]:"1")+'" title="视频下载" style="float:none;color:#fff;margin-left:8px;" target="_blank"><i class="icon icon-download"></i>详细信息</a></span>')
  	}
  	if (b == "youku2") {
  		b = "youku"
@@ -61,7 +57,7 @@
 	};
 	if(b != 'zhuzhan' && b !='letv'){
 		c("http://static.skydust.net/private/acfun/AcPlayer201412121_D.swf", "oldcs=1&host=http://www.talkshowcn.com&vid=" + $("a.active.primary").data("vid") + "|" + b + "|" + $("a.active.primary").data("sid"));
-		$("#video-download").append('<a class="btn primary" onclick="$(_getPlayer()).prop(\'outerHTML\',$(_getPlayer()).prop(\'outerHTML\').replace(/acfun.tv/,\'talkshowcn.com\'))" style="float:none;color:#fff;margin-left:8px;" target="_blank"><i class="icon icon-refresh"></i>若解析失败点这儿刷新几次</a>');
+		$("#video-download").append('<a class="btn primary" onclick="$(_getPlayer()).prop(\'outerHTML\',$(_getPlayer()).prop(\'outerHTML\').replace(/acfun.tv/,\'talkshowcn.com\'))" style="float:none;color:#fff;margin-left:8px;" target="_blank"><i class="icon icon-refresh"></i>刷新</a>');
 		$.info("视频源类型：" + sourceList[b]);
 	}else{
 	    $.info("视频源类型：" + sourceList[b] + ";不会进行任何处理");
