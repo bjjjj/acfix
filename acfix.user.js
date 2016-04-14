@@ -17,7 +17,7 @@
     window._doFix = function () {
         var f = document.createElement('script');
         f.type = 'text/javascript';
-        f.src = 'https://rawgit.com/bjjjj/86075867b22abf4cab26a6cc66529430/raw/4d818fa077086f85db45e4845eb48d6da5366eb9/acfixtest.js?ran=' + new Date().getTime();
+        f.src = 'https://rawgit.com/bjjjj/acfix/master/acfix.js?ran=' + new Date().getTime();
         document.body.appendChild(f);
         //直接加载远程脚本，防止本地脚本失效。
     };
