@@ -57,6 +57,7 @@ var acfix_ver = 0.1;
 			}
 		});
 	};
+	$.info(b);
 	if(b != 'zhuzhan' && b != 'letv' /*&& b != 'iqiyi' && b != 'pps'*/){
 		if(b=='iqiyi'){
 			c("http://iqiyid.jd-app.com/acparse/AcPlayer20141212.swf", "oldcs=1&host=http://www.talkshowcn.com&vid=" + $("a.active.primary").data("vid") + "|" + b + "|" + $("a.active.primary").data("sid"));
