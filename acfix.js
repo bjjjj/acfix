@@ -31,6 +31,9 @@ var acfix_ver = 0.1;
  	if (b == "qq2") {
  		b = "qq"
  	}
+ 	if (b == "zhuzhan") {
+ 		b = "ac"
+ 	}
  	sourceList = {
  		"sina": "新浪视频",
  		"youku": "优酷网",
@@ -44,7 +47,7 @@ var acfix_ver = 0.1;
  		"iqiyi": "爱奇艺",
  		"56": "56网",
  		"pptv": "PPTV",
-		"zhuzhan": "主站"
+		"ac": "缺B乐"
  	};
 	if(typeof(sourceList[b]) == "undefined"){
 		$.ajax({
@@ -57,8 +60,7 @@ var acfix_ver = 0.1;
 			}
 		});
 	};
-	$.info(b);
-	if(b != 'zhuzhan' && b != 'letv' /*&& b != 'iqiyi' && b != 'pps'*/){
+	if(b != 'ac' && b != 'letv' /*&& b != 'iqiyi' && b != 'pps'*/){
 		if(b=='iqiyi'){
 			c("http://iqiyid.jd-app.com/acparse/AcPlayer20141212.swf", "oldcs=1&host=http://www.talkshowcn.com&vid=" + $("a.active.primary").data("vid") + "|" + b + "|" + $("a.active.primary").data("sid"));
 		}else{
