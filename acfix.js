@@ -84,7 +84,7 @@ var acfix_ver = 0.1;
                                     }
                                 },
                                 
-                                $$("#ACFlashPlayer-re").flash(o),
+                                $$("#ACFlashPlayer-re").flash(o);
                                 $$("#area-player").removeAttr("style");
 		}else{
 			c("http://static.skydust.net/private/acfun/AcPlayer201412121_D.swf", "oldcs=1&host=http://www.talkshowcn.com&vid=" + $("a.active.primary").data("vid") + "|" + b + "|" + $("a.active.primary").data("sid"));
