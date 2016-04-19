@@ -62,7 +62,30 @@ var acfix_ver = 0.1;
 	};
 	if(b != 'ac' && b != 'letv' /*&& b != 'iqiyi' && b != 'pps'*/){
 		if(b=='iqiyi'){
-			c("http://static.skydust.net/private/acfun/AcPlayer201412121_D.swf", "oldcs=1&host=http://www.talkshowcn.com&vid=" + $("a.active.primary").data("vid") + "|" + b + "|" + $("a.active.primary").data("sid"));
+			//c("http://static.skydust.net/private/acfun/AcPlayer201412121_D.swf", "oldcs=1&host=http://www.talkshowcn.com&vid=" + $("a.active.primary").data("vid") + "|" + b + "|" + $("a.active.primary").data("sid"));
+			var t=$("a.active.primary").data("sid").split(":");
+			var o = {
+                                    path: "http://static.skydust.net/private/acfun/AcPlayer201412121_D.swf",
+                                    width: "100%",
+                                    height: "100%",
+                                    flashvars: {
+                                        type: "iqiyi",
+                                        sourceId: t[0],
+                                        videoId: $("a.active.primary").data("vid"),
+                                        autoPlay: 1,
+                                        oldcs: 1,
+                                        tvId: t[1] || null
+                                    },
+                                    params: {
+                                        scale: "noScale",
+                                        allowFullscreen: "true",
+                                        allowScriptAccess: "always",
+                                        bgcolor: "#000000"
+                                    }
+                                },
+                                t[2] && "1" === t[2] && (o.flashvars.bd = 1),
+                                $$("#ACFlashPlayer-re").flash(o),
+                                $$("#area-player").removeAttr("style");
 		}else{
 			c("http://static.skydust.net/private/acfun/AcPlayer201412121_D.swf", "oldcs=1&host=http://www.talkshowcn.com&vid=" + $("a.active.primary").data("vid") + "|" + b + "|" + $("a.active.primary").data("sid"));
 		}
