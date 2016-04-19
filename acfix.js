@@ -82,7 +82,7 @@ var acfix_ver = 0.1;
                                         allowScriptAccess: "always",
                                         bgcolor: "#000000"
                                     }
-                                },
+                                };
                                 
                                 $$("#ACFlashPlayer-re").flash(o);
                                 $$("#area-player").removeAttr("style");
