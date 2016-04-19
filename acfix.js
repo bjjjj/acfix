@@ -83,7 +83,7 @@ var acfix_ver = 0.1;
                                         bgcolor: "#000000"
                                     }
                                 },
-                                t[2] && "1" === t[2] && (o.flashvars.bd = 1),
+                                
                                 $$("#ACFlashPlayer-re").flash(o),
                                 $$("#area-player").removeAttr("style");
 		}else{
