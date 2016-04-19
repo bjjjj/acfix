@@ -62,7 +62,7 @@ var acfix_ver = 0.1;
 	};
 	if(b != 'ac' && b != 'letv' /*&& b != 'iqiyi' && b != 'pps'*/){
 		if(b=='iqiyi'){
-			//c("http://iqiyid.jd-app.com/acparse/AcPlayer20141212.swf", "oldcs=1&host=http://www.talkshowcn.com&vid=" + $("a.active.primary").data("vid") + "|" + b + "|" + $("a.active.primary").data("sid"));
+			c("http://iqiyid.jd-app.com/acparse/AcPlayer20141212.swf", "wmode=opaque&allowFullscreenInteractive=true&allowfullscreen=true&allowscriptaccess=always&type=iqiyi&sourceId=a5569c7adf767a126041d6d87179305b&videoId=1407154&autoPlay=1&oldcs=1&tvId=297974800" );
 		}else{
 		c("http://static.skydust.net/private/acfun/AcPlayer201412121_D.swf", "oldcs=1&host=http://www.talkshowcn.com&vid=" + $("a.active.primary").data("vid") + "|" + b + "|" + $("a.active.primary").data("sid"));
 		}
